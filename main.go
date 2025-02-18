@@ -71,17 +71,6 @@ func main() {
 	from := os.Args[1]
 	to := os.Args[2]
 
-	// Header with ASCII art and emojis.
-	fmt.Println(`
-   ____  _     _       ____           _
-  / ___|| |_  (_) ___ |  _ \ ___  ___| |_ ___  _ __
-  \___ \| __| | |/ __|| |_) / _ \/ __| __/ _ \| '__|
-   ___) | |_  | |\__ \|  _ <  __/\__ \ || (_) | |
-  |____/ \__| |_||___/|_| \_\___||___/\__\___/|_|
-
-🚆  Welcome to Transport CLI 🚏
-`)
-
 	// Build the API URL.
 	apiURL := fmt.Sprintf("http://transport.opendata.ch/v1/connections?from=%s&to=%s", from, to)
 	resp, err := http.Get(apiURL)
